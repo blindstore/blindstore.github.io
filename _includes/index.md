@@ -22,5 +22,5 @@ Blindstore started at the [CERN Webfest](http://webfest.web.cern.ch/) Hackathon.
 
 ### License
 
-[MIT License](http://chibicode.mit-license.org/)
+MIT License
 
