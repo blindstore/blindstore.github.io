@@ -1,5 +1,5 @@
 
-Low-level private query datastore. Uses cryptographic [Private Information Retrieval](http://www.cs.ut.ee/~lipmaa/crypto/link/protocols/oblivious.php) protocol that ensures that server doesn't know the query yet answers correctly.
+Low-level private query datastore. It uses cryptographic [Private Information Retrieval](http://www.cs.ut.ee/~lipmaa/crypto/link/protocols/oblivious.php) protocol that ensures that server doesn't know the query yet answers correctly.
 
 
 ## Usage
@@ -15,8 +15,7 @@ Blindstore's PIR protocol is based on [Single-Database Private Information Retri
 from Fully Homomorphic Encryption](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6189348)
 by Xun Yi, Mohammed Golam Kaosar, Russell Paulet, and Elisa Bertino.
 It uses the [Scarab](https://hcrypt.com/scarab-library/) library for 
-Smart-Vercauteren scheme FHE which is described in [N. Smart and F. Vercauteren,
-Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes](http://dl.acm.org/citation.cfm?id=2163650).
+Smart-Vercauteren scheme FHE which is described in [Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes](http://dl.acm.org/citation.cfm?id=2163650).
 
 
 ## Authors
