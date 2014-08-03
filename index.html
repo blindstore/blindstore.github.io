@@ -79,7 +79,7 @@
                     <div class="intro-text">
                         <span class="name">Blindstore</span>
                         <hr class="star-light">
-                        <span class="skills">Blindstore is the first stone for a secure communication protocol</span>
+                        <span class="skills">The first stone for a secure communication protocol</span>
                     </div>
                 </div>
             </div>
@@ -98,26 +98,26 @@
             <div class="row">
                 <div class="col-lg-6 text-left">
 					<h4>Background</h4>
-                    <p>Snowden’s leaks last year disclosed the fragile condition of privacy on the Internet, having been threatened not only by private companies but also by governments’ intelligence agencies.</p>
-                    <p>Since then, quite a few developments have been done in order to mitigate the eavesdropping of private communications. Let's talk breafly about two services: Lavabit and Protonmail.</p>
+                    <p>Snowden's leaks last year disclosed the fragile condition of privacy on the Internet, having been threatened not only by private companies but also by governments' intelligence agencies.</p>
+                    <p>Since then, quite a few developments have been done in order to mitigate the eavesdropping of private communications. Let's talk briefly about two services: Lavabit and Protonmail.</p>
                     <p>Lavabit, developed in the USA, was a service that allowed such communications via email. However, under judicial request, they would be forced to give access to those communications.</p>
-                    <p>Protonmail is another services, founded last year by CERN people, that achieves to provide a similar service. It provides quite a few of nice guaranties that they’re taking your privacy seriously, but… is it enough?</p>
+                    <p>ProtonMail is another services, founded last year by CERN people, that achieves to provide a similar service. It provides quite a few of nice guaranties that they're taking your privacy seriously, but… is it enough?</p>
                     <p>There are still a few problems:</p>
 					<ul>
-						<li><p>It’s a private company (!!) and the code they are running is not open-source</p></li>
-						<li><p>You are trusting them, essentially, we also once trusted the don’t be evil</p></li>
-						<li><p>One huge limitation: it’s only secure as long as you contact people within ProtonMail</p></li>
+						<li><p>It's a private company and the code they are running is not open-source</p></li>
+						<li><p>You are trusting them, essentially, we also once trusted the don't be evil</p></li>
+						<li><p>One huge limitation: it's only secure as long as you contact people within ProtonMail</p></li>
 					</ul>
                 </div>
                 <div class="col-lg-6 text-left">
-                    <h4>Private communication: it can’t be that hard, right?</h4>
+                    <h4>Private communication: it can't be that hard, right?</h4>
                     <p>It should be fairly simple. Instead of letting Gmail or Protonmail handle our communication, we just want to do it ourselves with an open protocol.</p>
                     <p>We just need to establish a connection directly between person <strong>A</strong> and person <strong>B</strong> (<i>peer-to-peer</i>), and let them communicate securely by encrypting the conversation so nobody but them both can understand it.</p>
-                    <p>What do <strong>A</strong> and <strong>B</strong> need to maintain such communication? Let’s say it’s <strong>A</strong> initiating the conversation. <strong>A</strong>, having <strong>B</strong>’s identity, would need to know a location where <strong>B</strong> will be available, and his public key.</p>
-                    <p>In the good old days, this would be incredibly easy to achieve thanks to the super useful phonebooks. <strong>A</strong> would just need to check his copy of the phonebook and no evil NSA agent would have a single clue about it.</p>
-                    <p>Well… It’s not so easy as the Internet made things a bit more difficult in this regard. Now the Internet Phonebook™ would be outdated every few nanoseconds, as the location of every user changes several times per day. Also, the Internet Phonebook™ is a bit heavier than any server could easily deliver (many gigabytes). Because of this, we can’t afford nowadays shipping an updated Internet Phonebook™ on demand.</p>
-                    <p>To walk around this, <strong>A</strong> would need to ask an operator at the central, where the most updated version of the Internet Phonebook™ is stored, to look up <strong>B</strong>’s location. But wait! Now he knows we wanted to talk to <strong>B</strong>! And he could sell us out to the NSA!! Or even worse, he could be a NSA agent himself!!!</p>
-                    <p>That’s why we need an oblivious operator. An oblivious operator is an operator who will perform his job as expected, but will have no consciousness of what information he looked up, so not even him or the NSA will know that <strong>A</strong> wanted to contact <strong>B</strong>.</p>
+                    <p>What do <strong>A</strong> and <strong>B</strong> need to maintain such communication? Let's say it's <strong>A</strong> initiating the conversation. <strong>A</strong>, having <strong>B</strong>'s identity, would need to know a location where <strong>B</strong> will be available, and his public key.</p>
+                    <p>In the good old days, this would be incredibly easy to achieve thanks to the super useful phone books. <strong>A</strong> would just need to check his copy of the phone book and no evil NSA agent would have a single clue about it.</p>
+                    <p>Well… It's not so easy as the Internet made things a bit more difficult in this regard. Now the Internet Phone Book would be outdated every few nanoseconds, as the location of every user changes several times per day. Also, the Internet Phone Book is a bit heavier than any server could easily deliver (many gigabytes). Because of this, we can't afford nowadays shipping an updated Internet Phone Book on demand.</p>
+                    <p>To walk around this, <strong>A</strong> would need to ask an operator at the central, where the most updated version of the Internet Phone Book is stored, to look up <strong>B</strong>'s location. But wait! Now he knows we wanted to talk to <strong>B</strong>! And he could sell us out to the NSA!! Or even worse, he could be a NSA agent himself!!!</p>
+                    <p>That's why we need an oblivious operator. An oblivious operator is an operator who will perform his job as expected, but will have no consciousness of what information he looked up, so not even him or the NSA will know that <strong>A</strong> wanted to contact <strong>B</strong>.</p>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
                 <div class="col-lg-6 text-left">
                     <h4>Blindstore - the oblivious operator</h4>
                     <p>Blindstore is our implementation of a private query storage.</p>
-                    <p>Blindstore is a low-level private query datastore that uses cryptographic <a style="color: #424242;" href="http://www.cs.ut.ee/%7Elipmaa/crypto/link/protocols/oblivious.php">Private Information Retrieval</a> protocol to ensure that the server doesn't know the query yet answers correctly.</p>
+                    <p>Blindstore is a low-level private query data store that uses cryptographic <a style="color: #424242;" href="http://www.cs.ut.ee/%7Elipmaa/crypto/link/protocols/oblivious.php">Private Information Retrieval</a> protocol to ensure that the server doesn't know the query yet answers correctly.</p>
                 </div>
                 <div class="col-lg-6 text-left">
                     <h4>Technical details</h4>
@@ -169,9 +169,9 @@
                     <p>The main building pieces of our project:</p>
 					<ul>
 						<li><p>libscarab: A C library for homomorphic encryption</p></li>
-						<li><p>pyscarab wrapper: requirement for blindstore to use libscarab</p></li>
-						<li><p>blindstore server: stores the data and takes care of returning encrypted query responses</p></li>
-						<li><p>blindstore client: takes care of encrypting the queries and decrypting the query responses</p></li>
+						<li><p>pyscarab wrapper: requirement for Blindstore to use libscarab</p></li>
+						<li><p>Blindstore server: stores the data and takes care of returning encrypted query responses</p></li>
+						<li><p>Blindstore client: takes care of encrypting the queries and decrypting the query responses</p></li>
 						<li><p>Documentation</p></li>
 						<li><p>Tests</p></li>
 					</ul>
@@ -184,7 +184,7 @@
 					<ul>
 						<li><p>Python</p></li>
 					</ul>
-                    <p>Blogging & presentation:</p>
+                    <p>Blogging &amp; presentation:</p>
 					<ul>
 						<li><p><a href="https://stackedit.io/viewer#!provider=gist&gistId=98c3d42acb4cf7502e2a&filename=Blindstore%20CERN%20Webfest">Stackedit</a></p></li>
 						<li><p><a href="http://slides.com/omegak/blindstore">Slides.com</a></p></li>
@@ -253,7 +253,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About Blindstore</h3>
-                        <p>Blindstore is a low-level private query datastore that uses cryptographic PIR protocol.</p>
+                        <p>Blindstore is a low-level private query data store that uses cryptographic PIR protocol.</p>
                     </div>
                 </div>
             </div>
