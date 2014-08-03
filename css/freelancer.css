@@ -34,6 +34,11 @@ a.active {
 	color: #F86363;
 }
 
+.btn.custom-button-color {
+	background-color: #424242;
+	border-color: #424242;
+}
+
 h1,
 h2,
 h3,
