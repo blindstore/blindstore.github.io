@@ -34,7 +34,7 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top custom-navbar-color">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -74,7 +74,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <img class="img-responsive" src="img/logo.png" alt="" style="width: 30%; height: 30%;">
                     <div class="intro-text">
                         <span class="name">Blindstore</span>
                         <hr class="star-light">
@@ -135,13 +135,16 @@
                 <div class="col-lg-6 text-left">
                     <h4>Blindstore - the oblivious operator</h4>
                     <p>Blindstore is our implementation of a private query storage.</p>
-                    <p>Blindstore is a low-level private query datastore that uses cryptographic <a style="color: rgb(44, 62, 80);" href="http://www.cs.ut.ee/%7Elipmaa/crypto/link/protocols/oblivious.php">Private Information Retrieval</a> protocol to ensure that the server doesn't know the query yet answers correctly.</p>
+                    <p>Blindstore is a low-level private query datastore that uses cryptographic <a style="color: #424242;" href="http://www.cs.ut.ee/%7Elipmaa/crypto/link/protocols/oblivious.php">Private Information Retrieval</a> protocol to ensure that the server doesn't know the query yet answers correctly.</p>
                 </div>
                 <div class="col-lg-6 text-left">
                     <h4>Technical details</h4>
-                    <p>Blindstore's PIR protocol is based on <a style="color: rgb(44, 62, 80);" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6189348">Single-Database Private Information Retrieval from Fully Homomorphic Encryption</a> by Xun Yi, Mohammed Golam Kaosar, Russell Paulet, and Elisa Bertino.</p>
-					<p>It uses the <a style="color: rgb(44, 62, 80);" href="https://hcrypt.com/scarab-library/">Scarab</a> library for Smart-Vercauteren scheme FHE which is described in <a style="color: rgb(44, 62, 80);" href="http://dl.acm.org/citation.cfm?id=2163650">N. Smart and F. Vercauteren, Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes</a>.</p>
+                    <p>Blindstore's PIR protocol is based on <a style="color: #424242;" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6189348">Single-Database Private Information Retrieval from Fully Homomorphic Encryption</a> by Xun Yi, Mohammed Golam Kaosar, Russell Paulet, and Elisa Bertino.</p>
+					<p>It uses the <a style="color: #424242;" href="https://hcrypt.com/scarab-library/">Scarab</a> library for Smart-Vercauteren scheme FHE which is described in <a style="color: #424242;" href="http://dl.acm.org/citation.cfm?id=2163650">N. Smart and F. Vercauteren, Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes</a>.</p>
 					<p>For the sake of simplicity, the Blindstore DB is implemented using a simple binary matrix.</p>
+                </div>
+                <div class="col-lg-12 text-center">
+					<iframe width="100%" height="515" src="//www.youtube.com/embed/veVxB-VrZjU?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -238,13 +241,18 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-6">
+                    <div class="footer-col col-md-4">
                         <h3>Location</h3>
                         <p>CERN<br>Route de Meyrin 385<br>1217 Meyrin, Switzerland</p>
                     </div>
-                    <div class="footer-col col-md-6">
+                    <div class="footer-col col-md-4">
+						<h3>Share</h3>
+                        <iframe src="http://ghbtns.com/github-btn.html?user=blindstore&repo=blindstore&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+						<iframe src="http://ghbtns.com/github-btn.html?user=blindstore&repo=blindstore&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    </div>
+                    <div class="footer-col col-md-4">
                         <h3>About Blindstore</h3>
-                        <p>Blindstore is a low-level private query datastore that uses cryptographic PRI protocol.</p>
+                        <p>Blindstore is a low-level private query datastore that uses cryptographic PIR protocol.</p>
                     </div>
                 </div>
             </div>
