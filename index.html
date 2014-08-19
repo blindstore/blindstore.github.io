@@ -1,299 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-	<link rel="shortcut icon" href="img/logo.ico" />
-    <title>Blindstore</title>
-
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top custom-navbar-color">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Blindstore</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#motivation">Motivation</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#hackathon">Hackathon</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
+    <!-- Intro Section -->
+    <section id="intro" class="intro section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/logo.png" alt="" style="width: 30%; height: 30%;">
-                    <div class="intro-text">
-                        <span class="name">Blindstore</span>
-                        <hr class="star-light">
-                        <span class="skills">The first stone for a secure communication protocol</span>
+                <div class="col-lg-2 col-lg-offset-2 logo-block">
+                    <img class="logo img-responsive" src="{{ "assets/images/logo.png" | prepend: site.baseurl }}">
+                </div>
+                <div class="col-lg-6 desc-block">
+                    <h1>Blindstore</h1>
+                    <p>{{ site.description }}. Provides an online lookup service which returns the correct answer without it ever knowing what the question was. Uses black magic.</p>
+                </div>
+            </div>
+            <div class="features">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h2>Single point of entry</h2>
+                        <p>Unlike Distributed Hash Table, not prone to Sybil attack, and the data is not inherently public, since server is free to restrict access with authentication and authorization</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-1">
+                        <h2>Privacy</h2>
+                        <p>Protocol guarantees that the server can't know what the client's query was, and that the client doesn't know anything except the record she inquired about.</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-1">
+                        <h2>Here be dragons</h2>
+                        <p>Blindstore is early work in progress and is made using experimental cryptographic software. It can be used for research purposes only.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Motivation Grid Section -->
-    <section id="motivation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Motivation</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 text-left">
-					<h4>Background</h4>
-                    <p>Snowden's leaks last year disclosed the fragile condition of privacy on the Internet, having been threatened not only by private companies but also by governments' intelligence agencies.</p>
-                    <p>Since then, quite a few developments have been done in order to mitigate the eavesdropping of private communications. Let's talk briefly about two services: Lavabit and Protonmail.</p>
-                    <p>Lavabit, developed in the USA, was a service that allowed such communications via email. However, under judicial request, they would be forced to give access to those communications.</p>
-                    <p>ProtonMail is another services, founded last year by CERN people, that achieves to provide a similar service. It provides quite a few of nice guaranties that they're taking your privacy seriously, but… is it enough?</p>
-                    <p>There are still a few problems:</p>
-					<ul>
-						<li><p>It's a private company and the code they are running is not open-source</p></li>
-						<li><p>You are trusting them, essentially, we also once trusted the don't be evil</p></li>
-						<li><p>One huge limitation: it's only secure as long as you contact people within ProtonMail</p></li>
-					</ul>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <h4>Private communication: it can't be that hard, right?</h4>
-                    <p>It should be fairly simple. Instead of letting Gmail or Protonmail handle our communication, we just want to do it ourselves with an open protocol.</p>
-                    <p>We just need to establish a connection directly between person <strong>A</strong> and person <strong>B</strong> (<i>peer-to-peer</i>), and let them communicate securely by encrypting the conversation so nobody but them both can understand it.</p>
-                    <p>What do <strong>A</strong> and <strong>B</strong> need to maintain such communication? Let's say it's <strong>A</strong> initiating the conversation. <strong>A</strong>, having <strong>B</strong>'s identity, would need to know a location where <strong>B</strong> will be available, and his public key.</p>
-                    <p>In the good old days, this would be incredibly easy to achieve thanks to the super useful phone books. <strong>A</strong> would just need to check his copy of the phone book and no third party would have a clue about it.</p>
-                    <p>Well… It's not so easy as the Internet made things a bit more difficult in this regard. Now the Internet Phone Book would be outdated every few nanoseconds, as the location of every user changes several times per day. Also, the Internet Phone Book is a bit heavier than any server could easily deliver (many gigabytes). Because of this, we can't afford nowadays shipping an updated Internet Phone Book on demand.</p>
-                    <p>To walk around this, <strong>A</strong> would need to ask an operator at the central, where the most updated version of the Internet Phone Book is stored, to look up <strong>B</strong>'s location. But now they know we wanted to talk to <strong>B</strong>! The operator might give this information to a third party we don't trust, such as a criminal group or oppressive government.</p>
-                    <p>That's why we need an oblivious operator. An oblivious operator is an operator who will perform their job as expected, but will have no awareness of what information they looked up, and so won't know that <strong>A</strong> wanted to contact <strong>B</strong>.</p>
+                <div class="row calls">
+                    <div class="col-lg-3 col-lg-offset-4">
+                        <div class="button">
+                            <a class="btn btn-default page-scroll" href="#details">See more details</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-1">
+                        <div class="button">
+                            <a class="btn btn-default page-scroll" href="#contribute">Contribute</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section id="details" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
+                <div class="col-lg-8">
+                    <h3>Protocol</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 text-left">
-                    <h4>Blindstore - the oblivious operator</h4>
-                    <p>Blindstore is our implementation of a private query storage.</p>
-                    <p>Blindstore is a low-level private query data store that uses cryptographic <a style="color: #424242;" href="http://www.cs.ut.ee/%7Elipmaa/crypto/link/protocols/oblivious.php">Private Information Retrieval</a> protocol to ensure that the server doesn't know the query yet answers correctly.</p>
+                <div class="col-lg-8">
+                    <h4>Implementation</h4>
                 </div>
-                <div class="col-lg-6 text-left">
-                    <h4>Technical details</h4>
-                    <p>Blindstore's PIR protocol is based on <a style="color: #424242;" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6189348">Single-Database Private Information Retrieval from Fully Homomorphic Encryption</a> by Xun Yi, Mohammed Golam Kaosar, Russell Paulet, and Elisa Bertino.</p>
-					<p>It uses the <a style="color: #424242;" href="https://hcrypt.com/scarab-library/">Scarab</a> library for Smart-Vercauteren scheme FHE which is described in <a style="color: #424242;" href="http://dl.acm.org/citation.cfm?id=2163650">N. Smart and F. Vercauteren, Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes</a>.</p>
-					<p>For the sake of simplicity, the Blindstore DB is implemented using a simple binary matrix.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>Blindstore implements a cryptographic protocol called Strong Private Information Retrieval or Oblivious Transfer, specifically, the one defined in <a href="http://dx.doi.org/10.1109/TKDE.2012.90">Single-Database Private Information Retrieval from Fully Homomorphic Encryption</a> by <span class="nobr">X. Yi</span>, <span class="nobr">M.G. Kaosar</span>, <span class="nobr">R. Paulet</span>, and <span class="nobr">E. Bertino</span>.</p>
+                    <p>It uses <a href="https://hcrypt.com/">libscarab</a> for implementation of Smart-Vercauteren scheme Fully Homomorphic Encryption.</p>
                 </div>
-                <div class="col-lg-12 text-center">
-					<iframe width="100%" height="515" src="//www.youtube.com/embed/veVxB-VrZjU?rel=0" frameborder="0" allowfullscreen></iframe>
+                <div class="col-lg-3 col-lg-offset-1 sidenotes visible-lg-block">
+                    <p>In the Private Information Retrieval protocol, there's a sender (server) who holds some bits of information, and receiver (client) who wants to retrieve some of the bits in such a way that sender won't know which bits exactly the receiver wanted to get.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h4>Model</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>Using the Blindstore protocol, client can assume the server not to be trustworthy.</p>
+                    <p>The client locally encrypts the query using her Fully Homomorphic Encryption public key, and sends the encrypted query. The server evaluates certain homomorphic functions over the encrypted query and the data, and sends an encrypted response. Using her private key, client can decrypt it and obtain the plaintext response.</p>
+                    <p>Note that verification of authenticity of the plaintext response is out of scope of the Blindstore protocol.</p>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 sidenotes visible-lg-block">
+                    <p>Homomorphism in this case is a property of asymmetric encryption which says there exist certain homomorphic functions \(f\) such that:
+                    \[\text{DECRYPT}_{sk}(f\ (\text{ENCRYPT}_{pk}(\text{m}))) = f(\text{m})\]</p>
+                    <p>Check out this <a href="https://www.youtube.com/watch?v=veVxB-VrZjU">video</a> that shows a very high-level overview of the protocol</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Feasibility</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>The total communication and computation cost per request are roughly logarithmic of the database size.</p>
+                    <p>Privacy comes at cost of this computation and communication overhead. With the current implementation it takes seconds to generate a response even for small datasets (hundreds of records). Good thing the response generation algorithm is highly parallelizable and we're working on making it significantly faster.</p>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 sidenotes visible-lg-block">
+                    The communication cost per request is \(O(\gamma\log (m \cdot L))\), and computation cost per request is \(O(\gamma\log m + \gamma L)\), where \(m\) is a number of records in the database, \(L\) is a record size, and \(\gamma\) is the ciphertext size.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Applications</h3>
+                    <p>Blindstore can be used as a building block for different privacy-sensitive applications where database server is considered not trustworthy, like:</p>
+                        <ul>
+                            <li>Private domain name resolver</li>
+                            <li>Domain name availability search</li>
+                            <li>Private peer-to-peer signaling service</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="hackathon">
+    <section id="contribute" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>The Hackathon</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 text-left">
-                    <p>Blindstore started at the <a href="http://webfest.web.cern.ch/">CERN Webfest</a> Hackathon in 2014.<br>See the <a href="http://webfest.web.cern.ch/content/private-query-database">corresponding project page</a>.</p>
-                    <p>Everything we did can be found at the <a href="https://github.com/blindstore">Blindstore</a> GitHub organization.</p>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <p>The main building pieces of our project:</p>
-					<ul>
-						<li><p>libscarab: A C library for homomorphic encryption</p></li>
-						<li><p>pyscarab wrapper: requirement for Blindstore to use libscarab</p></li>
-						<li><p>Blindstore server: stores the data and takes care of returning encrypted query responses</p></li>
-						<li><p>Blindstore client: takes care of encrypting the queries and decrypting the query responses</p></li>
-						<li><p>Documentation</p></li>
-						<li><p>Tests</p></li>
-					</ul>
-                </div>
-                <div class="col-lg-12 text-left">
-                    <h4>Tools</h4>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <p>Technologies:</p>
-					<ul>
-						<li><p>Python</p></li>
-					</ul>
-                    <p>Blogging &amp; presentation:</p>
-					<ul>
-						<li><p><a href="https://stackedit.io/viewer#!provider=gist&gistId=98c3d42acb4cf7502e2a&filename=Blindstore%20CERN%20Webfest">Stackedit</a></p></li>
-						<li><p><a href="http://slides.com/omegak/blindstore">Slides.com</a></p></li>
-					</ul>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <p>Collaboration:</p>
-					<ul>
-						<li><p>Git and GitHub for code versioning and storage</p></li>
-						<li><p>Gitter for centralized chat</p></li>
-						<li><p>Indico for booking meeting rooms</p></li>
-					</ul>
-                </div>
-                <div class="col-lg-12 text-left">
-                    <h4>The Team</h4>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="5593031" height="230" src="https://avatars2.githubusercontent.com/u/5593031?v=1&amp;s=460" width="230">
-                    <p>Tommaso Papini (<a href="https://github.com/tommy39">@tommy39</a>) - Italy</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="716307" height="230" src="https://avatars3.githubusercontent.com/u/716307?v=1&amp;s=460" width="230">
-                    <p>Alejandro Avilés (<a href="https://github.com/OmeGak">@OmeGak</a>) - Spain</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="138279" height="230" src="https://avatars2.githubusercontent.com/u/138279?v=1&amp;s=460" width="230">
-                    <p>Benjamin Lipp (<a href="https://github.com/blipp">@blipp</a>) - Germany</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="1592918" height="230" src="https://avatars1.githubusercontent.com/u/1592918?v=1&amp;s=460" width="230">
-                    <p>Bogdan Kulynych (<a href="https://github.com/bogdan-kulynych">@bogdan-kulynych</a>) - Ukraine</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="829181" height="230" src="https://avatars0.githubusercontent.com/u/829181?v=1&amp;s=460" width="230">
-                    <p>Davide Kirchner (<a href="https://github.com/davidek">@davidek</a>) - Italy</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="1129958" height="230" src="https://avatars2.githubusercontent.com/u/1129958?v=1&amp;s=460" width="230">
-                    <p>Harry Cutts (<a href="https://github.com/Fodaro">@Fodaro</a>) - UK</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="2722756" height="230" src="https://avatars1.githubusercontent.com/u/2722756?v=1&amp;s=460" width="230">
-                    <p>José Molina (<a href="https://github.com/Moliholy">@Moliholy</a>) - Spain</p>
-                </div>
-                <div class="col-lg-6 text-center">
-					<img alt="" class="avatar" data-user="2813061" height="230" src="https://avatars3.githubusercontent.com/u/2813061?v=1&amp;s=460" width="230">
-                    <p>Michał Jabczyński (<a href="https://github.com/Eipifi">@Eipifi</a>) - Poland</p>
+                <div class="col-lg-8">
+                    <h1>Contribute</h1>
+                    <p>Blindstore started as a project at <a href="http://webfest.web.cern.ch/">CERN Webfest</a> hackathon by a bunch of CERN students enthusiastic about privacy and security. </p>
+                    <p>The main communication channel is the Blindstore repository Gitter: <br><code><a href="https://gitter.im/blindstore/blindstore">gitter.im/blindstore/blindstore</a></code></p>
+                    <p>Check out the current issues: <br><code><a href="https://github.com/blindstore/blindstore/issues">github.com/blindstore/blindstore/issues</a></code></p>
+                    <p>Main code hub is the Github organization: <br><code><a href="https://github.com/blindstore">github.com/blindstore</a></code></p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>CERN<br>Route de Meyrin 385<br>1217 Meyrin, Switzerland</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-						<h3>Share</h3>
-                        <iframe src="http://ghbtns.com/github-btn.html?user=blindstore&repo=blindstore&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-						<iframe src="http://ghbtns.com/github-btn.html?user=blindstore&repo=blindstore&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Blindstore</h3>
-                        <p>Blindstore is a low-level private query data store that uses cryptographic PIR protocol.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Blindstore 2014
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary custom-button-color" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-
-</body>
-
-</html>

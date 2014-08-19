@@ -1,0 +1,16 @@
+# Site settings
+title: Blindstore
+description: "Open Source Private Information Retrieval datastore"
+# baseurl: "https://blindstore.github.io/blindstore-new-site/"
+baseurl: ""
+url: "https://blindstore.github.io/blindstore-new-site"
+github_username:  blindstore
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Sass
+sass:
+    sass_dir: assets/stylesheets/_scss
+    style: :compressed

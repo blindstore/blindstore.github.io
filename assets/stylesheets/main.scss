@@ -1,0 +1,143 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+
+$font-family-base: 'Fira Sans','Helvetica Neue',Arial,sans-serif;
+$font-size-base: 18px;
+$navbar-default-bg: #fff;
+
+@import "bootstrap/bootstrap";
+@import "syntax";
+@import "fira";
+
+$intro-background: #fff;
+
+
+/*!
+ * CREDITS:
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+  width: 100%;
+  height: 100%;
+
+  line-height: 1.4em;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.navbar {
+  .navbar-nav a.page-scroll {
+    padding: .75em;
+  }
+
+  .social {
+    height: 26px;
+    padding: 13px;
+  }
+
+  .social-first {
+    @media(min-width:767px) {
+      margin-left: 3.5em;
+    }
+  }
+}
+
+@media(min-width:767px) {
+  .navbar {
+    background: $intro-background;
+    padding: 1em 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+    background: $navbar-default-bg;
+    padding: 0;
+  }
+}
+
+.section {
+  position: relative;
+  min-height: 100%;
+  padding: 1em;
+  padding-top: 3em;
+}
+
+.sidenotes {
+  font-style: italic;
+  font-size: 0.6em;
+  line-height: 1.15em;
+}
+
+.intro {
+  padding-top: 6.5em;
+  text-align: left;
+  background: $intro-background;
+
+  .logo {
+    display: block;
+    max-width: 8em;
+    margin: 1em auto;
+  }
+
+  .logo-block, .desc-block {
+    text-align: center;
+    p {
+      text-align: left;
+    }
+  }
+
+  @media(min-width:767px) {
+    .logo-block {
+      margin-top: 1em;
+    }
+    .desc-block {
+      .button, p, h1, h2, h3, h4 {
+        text-align: left;
+      }
+    }
+  }
+
+  .button {
+    margin-top: .5em;
+  }
+
+  .features {
+    position: relative;
+    margin-top: 3em;
+    font-size: 80%;
+
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  .calls {
+    margin-top: 1em;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 10em;
+  bottom: 0;
+  margin-top: -2.5em;
+  padding: 2em 0;
+  border-top: 1px solid #ccc;
+  font-size: .75em;
+}
